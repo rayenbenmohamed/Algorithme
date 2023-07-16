@@ -1,0 +1,96 @@
+algorythme phrase 
+  var 
+     str:STRING[100]
+     nbmot:INTEGER:=0;
+     nbvyl:INTEGER:=0;
+     i,j:INTEGER;
+ begin 
+  DO
+    write("donnez  une phrase ")
+    read (str)
+  WHILE (str[str.lenght-1]=".")
+ FOR i FROM 0 to str.lenght-1 Step 1 DO
+    IF (str[i]=" ") THEN
+      nbmot+=1;
+   END_if
+   if (ToUpper(str[j])in['A','E','I','O','U','Y'])  then
+        nbvyl+=1;
+     END_if
+ if (nbmot ==0)&&(str.length>1) then
+     nbmot:=1
+ END_if
+   if(str.length ==1) then
+    nbvyl=0
+    nbmot=0
+   END_if
+ End_FOR
+ Write("Le nombre de mots dans la phrase : ", nbmot + 1); 
+ Write("Le nombre de voyelles dans la phrase : ", nbvyl);
+ END;
+
+
+algorythme jeu
+  var 
+    i,j:INTEGER
+    jeu1:ARRAY_OF INTEGR[n];
+    jeu2:ARRAY_OF INTEGR[n1];
+    jeu3:ARRAY_OF INTEGR[k]
+    som:INTEGER:=0;
+    k:INTEGER:=0;
+ begin
+  write("donner le taille de le  premier tableau")
+  read(n)
+  write("donner le taille de le deuxiéme tableau")
+  read(n1)
+ FOR i FROM 0 to n Step 1 DO 
+    write("donner l'element"i)
+    read(jeu1[i]
+ end_for
+ FOR i FROM 0 to n Step 1 DO 
+    write("donner l'element"i)
+    read(jeu2[i])
+ end_for
+FOR i FROM 0 to n1 Step 1 DO 
+    write("donner l'element"i)
+    read(jeu2[i])
+ end_for
+
+  
+FOR i FROM 0 to n Step 1 DO 
+ j:=0;
+   while (j<jeu2.lenght)
+     IF jeu2[j]==jeu1[i] THEN
+        BREAK
+     END_IF
+    j:=j+1;
+   END_WHile
+  if (j>jeu2.lenght-1) then 
+  jeu3[k]:=jeu1[i]
+  k:=k+1 
+END_FOR
+FOR i FROM 0 to jeu2.lenght-1 Step 1 DO 
+ j:=0;
+   while (j<jeu1.lenght)
+     IF jeu1[J]==jeu2[i] THEN 
+        break
+     END_IF	
+   END_WHile
+  if (j>jeu1.lenght-1) then 
+   jeu3[k]:=jeu1[i]
+   k:=k+1
+  END_IF;
+END_FOR;
+
+FOR i FROM 0 to jeu3.lenght-1 Step 1 DO 
+ som:=som+jeu3[i]
+END_FOR
+whrite ( "les sommes est",som  "les elemtnt distanct sont :")
+FOR i FROM 0 to jeu3.lenght-1 Step 1 DO
+ write (jeu3[i]," ")
+END_FOR
+END;
+
+
+
+
+ 
